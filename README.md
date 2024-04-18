@@ -30,8 +30,7 @@ Notes:
   
 ## Inspirations et credits
 
-Le code pour le senseur ultrason, les dels, et tout ce qui est i2c (donc, par extension les bumpers et le buzzer)
-ont étés fait à l'aide des fichiers d'exemple du robot trouvés sur waveshare.
+Le code pour le senseur ultrason, les dels, et tout ce qui est i2c (donc, par extension les bumpers et le buzzer) ont étés fait à l'aide des fichiers d'exemple du robot trouvés sur waveshare.
 
 ## Materiel et composants
 

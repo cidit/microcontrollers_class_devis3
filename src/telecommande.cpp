@@ -4,7 +4,14 @@
 
 const auto RECEIVER_PIN = 4;
 
-String obtenirBoutonNom(REMOTE_BUTTON_CODES code) {
+/**
+ * Traduit un code de télécommande en le nom du bouton qui lui est associé.
+ * Principalement utile pour afficher le code sans à avoir à se rappler de son chiffre.
+ * @param code Le code de télécommande à nommer.
+ * @return Le nom du code donné en paramètres.
+ */
+String obtenirBoutonNom(REMOTE_BUTTON_CODES code)
+{
     switch (code)
     {
     case CHANEL_MINUS:
@@ -54,13 +61,22 @@ String obtenirBoutonNom(REMOTE_BUTTON_CODES code) {
     };
 }
 
+/**
+ * Initialise le receveur infrarouge pour capter les signaux de la télécommande.
+ */
 void initTelecommande()
 {
     IrReceiver.begin(RECEIVER_PIN);
 }
 
-long getCodeRecu() {
-    if (!IrReceiver.decode()) {
+/**
+ * Sert à déterminer si le capteur infrarouge a capté une commande.
+ * @return le code reçu, ou -1 si aucun code n'a été décodé.
+ */
+long getCodeRecu()
+{
+    if (!IrReceiver.decode())
+    {
         return -1;
     }
     auto code = IrReceiver.decodedIRData.command;
